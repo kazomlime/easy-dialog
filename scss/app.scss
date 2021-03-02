@@ -1,0 +1,101 @@
+$primary:#0073be;
+$secondary:/* #66c8f7 */#0093D1;
+$success:#5bb75b;
+$warning:#faa732;
+$danger:#da4f49;
+$body-color:#090b3e;
+$third-color:#f3f3f7 /*#00A4F1*/;
+$fourth-color: #E8E8E8;
+$fifth-color: #060239;
+$sixth-color: #001389;
+$seventh-color: #0093D1; /* HORISEN LOGO ORIGINAL */
+$base-color: #FFF;
+
+* {box-sizing: border-box;}
+
+html, body {
+  margin: 0;
+  height:calc(100% - 20px);
+}
+
+body {
+  margin-top: 20px;
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  font-family: 'Roboto', sans-serif;
+}
+.dialog-wrap {
+  display: grid;
+  min-height: 400px;
+  max-width: 1200px;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 50px 50px 1fr 70px;
+  height: 90%;
+  margin: auto;
+  border: solid 1px $third-color;
+  .dialog-header {
+    background-color: $primary;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  .search {
+    grid-row: 2 / 3;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    input {
+      height: 30px;
+      width: 100%;
+      border: solid 1px $third-color;
+      border-radius: 0;
+      :focus {
+        outline: 0;
+      }
+    }
+  }
+  .chat-header {
+    background-color: $primary;
+    color: $base-color;
+
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  .contacts {
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+    grid-row: 3 / 5;
+    .contact {
+      min-height: 70px;
+      border-bottom: solid 1px $third-color;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  .chat {
+    overflow-y: auto;
+    grid-row: 2 / 4;
+  }
+  .message {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+
+  }
+}
