@@ -160,6 +160,20 @@ body {
   .message {
     grid-row: 4 / 5;
     grid-column: 2 / 3;
-
+    background-color: $third-color;
+    padding: 7px;
+    input {
+      height: 35px;
+      border:solid 1px $third-color;
+      width:100%
+    }
+  }
+  .chat-baloon {
+    background-color: $primary;
+    color: $base-color;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    max-width: 50%;
   }
 }
